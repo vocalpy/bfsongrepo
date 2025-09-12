@@ -46,7 +46,7 @@ Bengalese finches (*Lonchura striata var. domestica*).
 Any file associated with one of the four birds is prefixed with that bird's ID:
 "bl26lb16", "gr41rd51", "gy6or6", "or60yw70".
 Song was recorded from birds as baseline recordings
-for behavioral experiments (not included in this dataset).
+(for behavioral experiments (that are not included in this dataset).
 Birds were isolated in sound-attenuating chambers
 and maintained on a 14 h:10 h light/dark cycle,
 with lights on from 7 A.M. to 9 P.M.
@@ -116,6 +116,22 @@ In some cases
 these were annotated,
 again with a character that was not in the set
 chosen for the labeling schema.
+
+:::{note}
+
+Please note that not all audio files have annotations.
+
+For example, 882 of the audio files for the individual gr41rd51 do not have associated annotations.
+
+To the best of our knowledge these unlabeled songs are not different from the labeled songs. 
+E.g., it is not the case that the unlabeled songs are songs that the human annotators found harder to annotate.
+
+As noted above, these recordings were originally collected as baseline data for a behavioral experiment.
+For the analysis we only annotated a subset of the data.
+Because some birds sing more than others, and because we were not super careful about exactly how much data we annotated for each bird, there's variation in the number of human-annotated songs.
+When we originally released the dataset, we made available all the data we had for each of the baseline days,
+ i.e., all audio files and the annotations for a subset of those files.
+:::
 
 ## Usage
 
