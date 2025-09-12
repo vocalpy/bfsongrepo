@@ -135,40 +135,13 @@ When we originally released the dataset, we made available all the data we had f
 
 ## Usage
 
-To make it easy to work with the dataset,
-we have created a Python package, evfuncs,
-available at https://github.com/soberlab/evfuncs.
-You can install it with `pip` or `conda`.
-
-:::{eval-rst}
-
-.. tabs::
-
-   .. code-tab:: shell with ``pip``
-
-         pip install evfuncs
-
-   .. code-tab:: shell with ``conda``
-
-         conda install evfuncs -c conda-forge
-
+:::{hint}
+You may find it convenient to use the [vocalpy](https://vocalpy.readthedocs.io/en/latest/) package we have developed 
+to work with this dataset. Vocalpy makes it easy to work with 
+both the audio files and annotation files, regardless of what file formats you are using.
 :::
 
-How to work with the files is described on the README of that library,
-but we describe the types of files here briefly.
-The actual sound files have the extension .cbin
-and were created by an application that runs behavioral experiments
-and collects data called EvTAF.
-Each .cbin file has an associated annotation file, with the extension .not.mat,
-that contains song syllable onsets, offsets, labels, etc.,
-created by a GUI for song annotation called evsonganaly.
-Each .cbin file also has an associated .rec file,
-also created by EvTAF.
-These are included only because they contain the sampling rate,
-and are used by `evfuncs` to provide this sampling rate
-along with raw audio from .cbin files, via the `load_cbin` function.
-
-### New audio and annotation format
+### Wav audio files and csv annotation files
 
 We have now added separate .tar.gz archives
 that contain the audio files in the .wav format,
@@ -184,6 +157,30 @@ https://crowsetta.readthedocs.io/en/latest/formats/seq/simple-seq.html#simple-se
 
 or if you prefer, any library that can read .csv files,
 such as `pandas`: https://pandas.pydata.org/
+
+
+### Cbin audio files and not.mat annotation files
+
+In order to work with the files in their original formats,
+we developed a Python package, evfuncs,
+available at https://github.com/soberlab/evfuncs.
+Note that this package is no longer actively maintained,
+but it is fairly simple scientific Python,
+mostly literal translations of the original Matlab code.
+
+How to work with the files is described on the README of that library,
+but we describe the types of files here briefly.
+The actual sound files have the extension .cbin
+and were created by an application that runs behavioral experiments
+and collects data called EvTAF.
+Each .cbin file has an associated annotation file, with the extension .not.mat,
+that contains song syllable onsets, offsets, labels, etc.,
+created by a GUI for song annotation called evsonganaly.
+Each .cbin file also has an associated .rec file,
+also created by EvTAF.
+These are included only because they contain the sampling rate,
+and are used by `evfuncs` to provide this sampling rate
+along with raw audio from .cbin files, via the `load_cbin` function.
 
 ### Scripts to build the dataset and source code for this site
 
