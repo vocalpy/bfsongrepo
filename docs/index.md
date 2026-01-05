@@ -187,7 +187,7 @@ along with raw audio from .cbin files, via the `load_cbin` function.
 Scripts used to organize the dataset,
 as well as the source code for this site,
 can be found at:
-https://github.com/NickleDave/bfsongrepo.
+https://github.com/vocalpy/bfsongrepo.
 These may provide helpful examples for working with the data
 and/or creating a similar project.
 
@@ -205,7 +205,7 @@ paste the corresponding command below into a terminal
 
 #### .wav audio + .csv annotations
 
-:::{eval-rst}
+```{eval-rst}
 
 .. tabs::
 
@@ -216,11 +216,11 @@ paste the corresponding command below into a terminal
    .. code-tab:: shell Windows
 
       (Invoke-WebRequest -Uri https://raw.githubusercontent.com/NickleDave/bfsongrepo/main/src/scripts/download_dataset.py -UseBasicParsing).Content | py - --audio-annot-type wav-csv
-:::
+```
 
 #### .cbin audio + .not.mat annotations
 
-:::{eval-rst}
+```{eval-rst}
 
 .. tabs::
 
@@ -232,13 +232,13 @@ paste the corresponding command below into a terminal
 
       (Invoke-WebRequest -Uri https://raw.githubusercontent.com/NickleDave/bfsongrepo/main/src/scripts/download_dataset.py -UseBasicParsing).Content | py - --audio-annot-type cbin-notmat
 
-:::
+```
 
 ## Citation
 
 The dataset can be cited as follows:
 
-:::{eval-rst}
+```{eval-rst}
 
 .. tabs::
 
@@ -255,7 +255,7 @@ The dataset can be cited as follows:
 
       @article{Nicholson2022, author = "David Nicholson and Jonah E. Queen and Samuel J. Sober", title = "{Bengalese Finch song repository}", year = "2022", month = "9", url = "https://figshare.com/articles/dataset/Bengalese_Finch_song_repository/4805749", doi = "10.6084/m9.figshare.4805749.v7" }
 
-:::
+```
 
 Please be sure to include the DOI of the version you use with your citation.
 
