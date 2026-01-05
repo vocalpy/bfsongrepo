@@ -4,6 +4,54 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## scripts and website for the Bengalese Finch Song Repository
 
+## Development
+
+### set up
+
+We use Nox to run development tasks.
+
+```console
+brew install nox
+```
+
+Clone the repo and then run the Nox session named `"dev"` to make a virtual environment with all development dependencies.
+
+```
+nox -s dev
+```
+
+### Usage
+
+#### Building the documentation
+
+To build the docs locally, run the Nox session `"docs"`.
+
+```
+nox -s docs
+```
+
+It essentially runs this command:
+
+```console
+sphinx-build -nW --keep-going -b html docs docs/build/html
+```
+
+To inspect the generated docs, you can do the following: 
+
+```console
+cd docs/build/html; python -m http.server; cd ../../.. 
+```
+
+and then navigate to )http://127.0.0.1:8000 in a browser while the Python http server is running.
+
+#### Publishing the documentation
+
+Once you are happy with the look of the generated docs, run the `"publish-to-github"` session.
+
+```
+nox -s publish-to-github
+```
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
